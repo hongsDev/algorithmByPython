@@ -5,9 +5,10 @@ def selection_sort(array):
     for i in range(n-1):
         min_idx = i
         for j in range(n-i):
-            if array[min_idx]  > array[i + j]:
-                min_idx = i + j
-        array[i], array[min_idx] =  array[min_idx], array[i]
+            if array[min_idx] > array[j + i]:
+                min_idx = j + i
+
+        array[i], array[min_idx] = array[min_idx], array[i]
     return array
 
 selection_sort(input)
