@@ -1,14 +1,20 @@
 input = [4, 6, 2, 9, 1]
 def selection_sort(array):
 
+    n1 = len(array)
+    print(n1)
+    for i in range(n1-1):
+        print(i)
+
+
     n = len(array)
     for i in range(n-1):
         min_idx = i
         for j in range(n-i):
             if array[min_idx] > array[j + i]:
-                min_idx = j + i
+                min_idx  =  j + i
 
-        array[i], array[min_idx] = array[min_idx], array[i]
+        array[i], array[min_idx] = array[min_idx],array[i]
     return array
 
 selection_sort(input)
