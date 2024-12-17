@@ -1,19 +1,12 @@
-def get_receiver_top_orders(array):
-    answer = [0] * len(array)
-    n = len(array)
+def get_receiver_top_orders(heights):
+    answer = [0] * len(heights)
+    n = len(heights)
 
     for i in range(n-1, 0, -1):
-        for j in range(i - 1, -1, -1):
-            print(i, j)
-            if array[i] <= array[j]:
+        for j in range(i-1, -1, -1):
+           if heights[i] <= heights[j]:
                 answer[i] = j+1
                 break
-
-#0 1 2 3 4
-#0 1 2 3
-#0 1 2
-#0 1
-#0
 
     return answer
 
