@@ -12,6 +12,7 @@ def get_price_not_fall_periods(prices):
             if prices[i] <= prices[j]:
                 time += 1
             else:
+                time += 1 #문제 요구상 가격이 떨어 졌을 때 까지도 1초로 계산을 해야함
                 break
         result[i] = time
 
